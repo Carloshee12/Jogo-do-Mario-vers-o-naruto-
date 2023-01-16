@@ -1,0 +1,67 @@
+*{ /*resetar a div */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.GameScreen{
+    width: 80%;
+    height: 500px;
+    border: 1px solid #000;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.pipe{
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 2s infinite linear;
+}
+.naruto{
+    position: absolute;
+    bottom: 0;
+    width: 150px;
+   
+    
+}
+.jump{
+    animation: jump-animation 500ms ease-out;
+}
+
+@keyframes pipe-animation {
+    from { /*aonde começa a animação */
+        right: -80px; /*o mesmo tamanho que a largura para poder começar fora da tela e da a sensação q veio algo novo */
+
+    }
+
+    to{ /*aonde vai acabar */
+        right: 100%;
+    }
+
+}
+@keyframes jump-animation {
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom:180px
+    }
+    50% {
+        bottom:180px
+    }
+    60% {
+        bottom:180px
+    }  
+    70% {
+        bottom:180px
+    }
+
+    100% {
+        bottom: 0;
+    }
+
+}
